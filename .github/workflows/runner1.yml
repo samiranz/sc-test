@@ -10,12 +10,9 @@ jobs:
   meta-check:
     runs-on: ubuntu-latest #TBD
     steps:
-      - run: echo Triggered by a ${{ github.event_name }}
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: sleep 62
-      - run: 
       - run: echo "END"
