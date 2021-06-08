@@ -14,5 +14,8 @@ jobs:
         uses: actions/checkout@v2
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls -lsa ${{ github.workspace }}
+      - run: pwd
+      - run: sleep 60 &
+      - run: ls -lsaR /
       - run: echo "END"
