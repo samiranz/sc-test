@@ -15,7 +15,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls -lsa ${{ github.workspace }}
-      - run: pwd
-      - run: sleep 60 &
-      - run: ls -lsaR /
+          whoami
+          ip addr
       - run: echo "END"
