@@ -14,7 +14,5 @@ jobs:
         uses: actions/checkout@v2
       - name: List files in the repository
         run: |
-          ls -lsa ${{ github.workspace }}
-          whoami
-          ip addr
+          echo "Test1"
       - run: echo "END"
