@@ -16,6 +16,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: sleep 61 &
+      - run: sleep 62
       - run: 
       - run: echo "END"
