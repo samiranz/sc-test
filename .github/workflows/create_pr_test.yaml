@@ -14,4 +14,4 @@ jobs:
           commit-message: test commit message
           title: test title
           body: test body
-          branch: master
+          branch: main
