@@ -14,7 +14,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: Ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Prepare deploy properties
         working-directory: main
