@@ -14,7 +14,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu
     steps:
       - name: Prepare deploy properties
         working-directory: main
