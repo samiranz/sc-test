@@ -1,0 +1,27 @@
+name: cd-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      prod_client_id:
+        description: "Deployment Client ID - test"
+        required: true
+        default: "client_id"
+      prod_client_secret:
+        description: "Deployment Client Client - test"
+        required: true
+        default: "client_secret"
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Prepare deploy properties
+        working-directory: main
+        run: |
+          echo $'\n' >> ./tmp.props
+          echo "deployment.connectedapp.client.id=${{ github.event.inputs.prod_client_id }}" >> ./tmp.props
+          echo $'\n' >> ./tmp.props
+          echo "deployment.connectedapp.client.secret=${{ github.event.inputs.prod_client_secret }}" >> ./tmp.props
+          echo $'\n' >> ./tmp.props
+          cat ./tmp.props
